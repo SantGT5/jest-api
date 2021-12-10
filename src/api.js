@@ -1,17 +1,20 @@
 import axios from "axios";
 
-const APIScan = {
-  
-   fetchAPIScan: async (link) => {
+export const APIScan = {
+  fetchAPIScan: async (link) => {
     try {
       const response = await axios.get(link);
-      console.log(response)
       return response.data;
-    } catch (err) {
-      console.log(err.response);
+    } catch (error) {
+      throw new Error("Ha fallado fetchAPIScan");
     }
   },
+};
 
+export const INICIAL_STATE = {
+  counte: Number,
+  next: String,
+  results: [],
 };
 
 export default APIScan;
