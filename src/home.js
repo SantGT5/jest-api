@@ -6,7 +6,7 @@ export const Home = () => {
 
   React.useEffect(() => {
     APIScan.fetchAPIScan("http://swapi.dev/api/people").then((res) => {
-      delete res.previous;
+      // delete res.previous;
       setState(res);
     });
   }, []);
@@ -14,8 +14,6 @@ export const Home = () => {
   const handleClick = () => {
     setState(INICIAL_STATE);
   };
-
-  console.log("orignal -> ", state);
 
   return (
     <div>

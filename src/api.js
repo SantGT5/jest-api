@@ -6,13 +6,13 @@ export const APIScan = {
       const response = await axios.get(link);
       return response.data;
     } catch (error) {
-      throw new Error("Ha fallado fetchAPIScan");
+      console.log(error)
     }
   },
 };
 
 export const INICIAL_STATE = {
-  counte: Number,
+  count: Number,
   next: String,
   results: [],
 };

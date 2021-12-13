@@ -1,11 +1,10 @@
-
-import './App.css';
-import { Home } from "./home"
+import "./App.css";
+import { PokemonHome } from "./testHooks/Pokemon/PokemonHome";
 
 function App() {
   return (
-    <div >
-      <Home/>
+    <div>
+      <PokemonHome />
     </div>
   );
 }
